@@ -78,7 +78,55 @@
 #clock-hours::after {
     content: "HOURS";
 }
+/* For screens up to 800px */
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 90%;
+        height: auto;
+        position: static;
+        transform: none;
+        margin: 50px auto;
+        padding-top: 20px;
+    }
+    .clock {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .clock span {
+        font-size: 60px;
+        width: auto;
+        margin: 10px;
+    }
+    .container::before,
+    .container::after {
+        display: none;
+    }
+}
 
+/* For screens up to 600px */
+@media only screen and (max-width: 600px) {
+    .clock span {
+        font-size: 50px;
+        margin: 8px;
+    }
+    .clock span::after {
+        font-size: 14px;
+    }
+}
+
+/* For screens up to 400px */
+@media only screen and (max-width: 400px) {
+    .clock span {
+        font-size: 40px;
+        margin: 5px;
+    }
+    .clock span::after {
+        font-size: 12px;
+    }
+    .hero {
+        min-height: auto;
+        padding-bottom: 20px;
+    }
 #clock-minutes::after {
     content: "MINS";
 }
